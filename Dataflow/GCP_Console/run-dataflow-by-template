@@ -1,0 +1,11 @@
+gcloud dataflow jobs run twsps2bq-cr_real-template-20211104 \
+    --gcs-location gs://twitterdemo/templates/twsps2bq \
+    --region asia-east1 \
+    --staging-location gs://twitterdemo/templates/twsps2bq
+
+
+gcloud run deploy --image asia.gcr.io/spring-index-327605/cf-2-cr/sample2pub \
+--platform managed \
+--port 8000 \
+--memory 1Gi \
+--timeout=60m \

@@ -1,0 +1,6 @@
+python -m twfps2bq \
+    --runner DataflowRunner \
+    --project spring-index-327605 \
+    --staging_location gs://twitterdemo/staging \
+    --temp_location gs://twitterdemo/temp \
+    --template_location gs://twitterdemo/templates/twfps2bq \
